@@ -1,17 +1,13 @@
 package com.bf.action.doc;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Date;
 import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.struts2.ServletActionContext;
-
 import com.bf.po.doc.ApproveInfo;
 import com.bf.po.doc.Document;
 import com.bf.po.user.User;
@@ -20,19 +16,13 @@ import com.bf.service.approve.ApproveServiceFinder;
 import com.bf.service.doc.DocService;
 import com.bf.service.doc.DocServiceFinder;
 import com.bf.service.workFlow.WorkFlowServiceFinder;
-
 public class DocAction {
-	
-
 	@Resource(name = "docServiceFinderImpl")
 	private DocServiceFinder dsf;
-	
 	@Resource(name = "docServiceImpl")
 	private DocService ds;
-	
 	@Resource(name = "workFlowServiceFinderImpl")
 	private WorkFlowServiceFinder wsf;
-	
 	@Resource(name = "approveServiceFinderImpl")
 	private ApproveServiceFinder asf;
 	
@@ -51,9 +41,6 @@ public class DocAction {
 	private String transitionName;
 	
 	private String comment;
-
-
-	
 
 	//显示添加公文页面01
 	public String addDoc() {

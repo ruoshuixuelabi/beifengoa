@@ -11,24 +11,24 @@
            http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
            http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
     <!-- 扫描 -->
-    <context:component-scan base-package="com.bf"></context:component-scan>
+    <context:component-scan base-package="com.bf"/>
     <!-- 配置数据源 -->
     <bean id="dataSource"
           class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver">
         </property>
-        <property name="url" value="jdbc:mysql://localhost/bfoa02"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="root"></property>
+        <property name="url" value="jdbc:mysql://localhost/bfoa02" />
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
         <!-- 数据连接池初始值-->
-        <property name="initialSize" value="1"></property>
+        <property name="initialSize" value="1"/>
         <!-- 数据连接池最大值 -->
-        <property name="maxActive" value="300"></property>
+        <property name="maxActive" value="300"/>
         <!-- 数据连接池 最大空闲值-->
-        <property name="maxIdle" value="2"></property>
+        <property name="maxIdle" value="2"/>
         <!-- 数据连接池 最小空闲值-->
-        <property name="minIdle" value="1"></property>
+        <property name="minIdle" value="1"/>
     </bean>
     <!-- 配置 sessionFactory -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">

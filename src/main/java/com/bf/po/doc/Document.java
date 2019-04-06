@@ -1,15 +1,9 @@
 package com.bf.po.doc;
-
 import java.util.Date;
-
 import com.bf.po.user.User;
 import com.bf.po.workFlow.WorkFlow;
-
 /**
  * 公文
- * 
- * @author Administrator
- * 
  */
 public class Document {
 	public String getDoc_title() {
